@@ -70,6 +70,12 @@ set (ICON_INSTALL_DIR ${DATA_INSTALL_DIR}/icon)
 set (CONFIG_INSTALL_REL_DIR ${CMAKE_INSTALL_DATADIR}/${INSTALL_NAME})
 set (CONFIG_INSTALL_DIR ${CMAKE_INSTALL_PREFIX}/${CONFIG_INSTALL_REL_DIR})
 
+if (WIN32)
+    set(PLUGIN_INSTALL_TYPE RUNTIME)
+else()
+    set(PLUGIN_INSTALL_TYPE LIBRARY)
+endif()
+
 file (READ "${PROJECT_SOURCE_DIR}/lib/include/cc_tools_qt/version.h" version_file)
 string (REGEX MATCH "CC_TOOLS_QT_MAJOR_VERSION ([0-9]*)U*" _ ${version_file})
 set (major_ver ${CMAKE_MATCH_1})
