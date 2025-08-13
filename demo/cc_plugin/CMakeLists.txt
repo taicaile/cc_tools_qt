@@ -42,7 +42,8 @@ function (cc_plugin_demo)
 
     install (
         TARGETS ${name}
-        MODULE DESTINATION ${PLUGIN_INSTALL_REL_DIR})
+        RUNTIME DESTINATION ${PLUGIN_INSTALL_REL_DIR}
+        LIBRARY DESTINATION ${PLUGIN_INSTALL_REL_DIR})
 
 endfunction()
 
