@@ -40,7 +40,7 @@ function (plugin_tcp_proxy_socket)
 
     install (
         TARGETS ${name}
-        ${PLUGIN_INSTALL_TYPE} DESTINATION ${PLUGIN_INSTALL_REL_DIR})
+        ${PLUGIN_INSTALL_ARGS} ${PLUGIN_INSTALL_REL_DIR})
 
 endfunction()
 
