@@ -27,7 +27,8 @@ function (plugin_null_socket)
 
     install (
         TARGETS ${name}
-        ${PLUGIN_INSTALL_ARGS} ${PLUGIN_INSTALL_REL_DIR})
+        RUNTIME DESTINATION ${PLUGIN_INSTALL_REL_DIR}
+        LIBRARY DESTINATION ${PLUGIN_INSTALL_REL_DIR})
 
 endfunction()
 

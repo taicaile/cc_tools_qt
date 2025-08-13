@@ -24,7 +24,8 @@ function (cc_plugin_raw_data_protocol)
 
     install (
         TARGETS ${name}
-        ${PLUGIN_INSTALL_ARGS} ${PLUGIN_INSTALL_REL_DIR})
+        RUNTIME DESTINATION ${PLUGIN_INSTALL_REL_DIR}
+        LIBRARY DESTINATION ${PLUGIN_INSTALL_REL_DIR})
 
 endfunction()
 
